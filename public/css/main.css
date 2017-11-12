@@ -1,0 +1,12 @@
+body { 
+    padding-top: 70px; 
+}
+
+div > h1 {
+    /* border: solid red 1px; */
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar-brand {
+    font-family: cursive;
+}
