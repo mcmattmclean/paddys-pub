@@ -8,12 +8,24 @@ div > h1 {
     font-family: 'Raleway', sans-serif;
 }
 
-.navbar-brand {
-    font-family: cursive;
-}
-
 .navbar {
     background-image: url(/static/images/wood-nav.jpeg);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    margin: 5px;
+}
+
+.navbar-default .navbar-brand {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+}
+
+.navbar-default {
+    border-width: 0;
 }
 
 .caro-img {
