@@ -1,6 +1,7 @@
 body { 
     padding-top: 70px;
     background-color: tan;
+    color: black;
 }
 
 div > h1 {
@@ -14,7 +15,13 @@ div > h1 {
 
 .navbar-default .navbar-nav>li>a {
     color: white;
+    font-family: 'Bungee', sans-serif;
     margin: 5px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: beige;
+    opacity: 0.5;
 }
 
 .navbar-default .navbar-brand {
@@ -22,6 +29,11 @@ div > h1 {
     font-size: 30px;
     color: white;
     margin: 5px;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: beige;
+    opacity: 0.5;
 }
 
 .navbar-default {
