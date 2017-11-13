@@ -1,5 +1,6 @@
 body { 
     padding-top: 70px; 
+    background-color: tan;
 }
 
 div > h1 {
@@ -8,5 +9,16 @@ div > h1 {
 }
 
 .navbar-brand {
-    font-family: cursive;
+    font-family: "Indie Flower", cursive;
+}
+
+.navbar {
+    background-image: url(/static/images/wood-nav.jpeg);
+    background-color: blue;
+}
+
+.caro-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
