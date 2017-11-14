@@ -2,9 +2,9 @@
 
 <h2>Products:</h2>
 {{#each productList}}
-<p>
-    {{this.name}}
-    {{this.description}}
-    {{this.id}}
-</p>
+<div class="col-md-2 product">
+    <p>{{this.name}}</p>
+    <p>{{this.description}}</p>
+    <p>{{this.id}}</p>
+</div>
 {{/each}}
