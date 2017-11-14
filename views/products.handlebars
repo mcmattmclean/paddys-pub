@@ -1,0 +1,26 @@
+<h1>Our Creations:</h1>
+{{#each productList}}
+<div class="row product">
+    <div class="col-md-4">
+        <img class="img-responsive" src="http://via.placeholder.com/400x600" alt="">
+    </div>
+    <div class="col-md-8">
+        <h2>{{this.name}}</h2>
+        <h3>{{this.type}}</h3>
+        <h4>{{this.description}}</h4>
+        <div class="beer-specs row">
+            <div class="col-md-4">
+                <h3>Availability</h3>
+                <p>{{this.availability}}</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Alc. by Vol.</h3>
+                <p>{{this.alc}}%</p>
+                <h3>Bitterness</h3>
+                <p>{{this.ibu}} IBUs</p>
+            </div>
+        </div>
+        <p>Product Code: {{this.id}}</p>
+    </div>
+</div>
+{{/each}}

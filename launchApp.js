@@ -1,11 +1,23 @@
+// Generate product list, to be replaced by MySQL at a later time
 var storeData = {};
+var adjectives = ["Spicy", "Rowdy", "Glorious", "Humble", "Gentle", "Ridiculous"];
+var nouns = ["Moonshine", "Citrus", "Mocha", "Celebration", "Watermelon", "Bourbon", "Classic", "California-Style"];
+var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale"];
+var availabilities = ["Year-round", "Seasonal"];
 var products = [];
 var numProducts = 20;
 for(var i = 0; i < numProducts; i++){
+    var type = types[Math.floor(Math.random() * types.length)];
+    var noun = nouns[Math.floor(Math.random() * nouns.length)];
+    var adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
     var newProduct = {}
-    newProduct.name = "Name " + i;
-    newProduct.description = "This is product " + i;
-    newProduct.id = i+1;
+    newProduct.name = adjective + ' ' + noun + ' ' + type;
+    newProduct.type = type;
+    newProduct.description = "This is product " + i + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima tempora asperiores, ipsum quae ipsam blanditiis, at aliquam ex dolorum delectus dolore ut quo fugit explicabo ipsa tenetur, cumque ducimus?";
+    newProduct.id = i + 1;
+    newProduct.availability = availabilities[Math.floor(Math.random() * availabilities.length)];
+    newProduct.alc = (Math.random() * (12 - 4 + 1) + 4).toFixed(1);
+    newProduct.ibu = Math.floor(Math.random() * (100 - 45 + 1) + 45);
     products.push(newProduct);
 }
 storeData.productList = products;
@@ -34,8 +46,8 @@ app.get('/guestbook', function(req,res){
     res.render('guestbook');
 });
 
-app.get('/store', function(req,res){
-    res.render('store', storeData);
+app.get('/products', function(req,res){
+    res.render('products', storeData);
 });
 
 // Error handling

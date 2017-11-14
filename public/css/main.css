@@ -52,5 +52,20 @@ div > h1 {
 }
 
 .product {
-    border: 2px solid black;
+    /* border: 1px solid beige; */
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-family: 'Raleway', sans-serif;    
+}
+.product div>p {
+    font-family: sans-serif;
+}
+
+.product .beer-specs {
+    font-family: 'Lobster', sans-serif;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 10px;
 }
