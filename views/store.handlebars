@@ -1,1 +1,10 @@
 <h1>Store</h1>
+
+<h2>Products:</h2>
+{{#each productList}}
+<p>
+    {{this.name}}
+    {{this.description}}
+    {{this.id}}
+</p>
+{{/each}}

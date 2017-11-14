@@ -15,7 +15,8 @@ div > h1 {
 
 .navbar-default .navbar-nav>li>a {
     color: white;
-    font-family: 'Bungee', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
     margin: 5px;
 }
 
@@ -25,7 +26,7 @@ div > h1 {
 }
 
 .navbar-default .navbar-brand {
-    font-family: 'Homemade Apple', cursive;
+    font-family: 'Lobster', cursive;
     font-size: 30px;
     color: white;
     margin: 5px;
@@ -38,6 +39,10 @@ div > h1 {
 
 .navbar-default {
     border-width: 0;
+}
+
+.carousel-caption {
+    font-family: 'Josefin Sans';
 }
 
 .caro-img {

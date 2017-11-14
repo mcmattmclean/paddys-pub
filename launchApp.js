@@ -1,3 +1,16 @@
+var storeData = {};
+var products = [];
+var numProducts = 20;
+for(var i = 0; i < numProducts; i++){
+    var newProduct = {}
+    newProduct.name = "Name " + i;
+    newProduct.description = "This is product " + i;
+    newProduct.id = i+1;
+    products.push(newProduct);
+}
+storeData.productList = products;
+
+
 var express = require('express');
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
@@ -22,7 +35,7 @@ app.get('/guestbook', function(req,res){
 });
 
 app.get('/store', function(req,res){
-    res.render('store');
+    res.render('store', storeData);
 });
 
 // Error handling
