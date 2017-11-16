@@ -1,27 +1,34 @@
 // Generate product list, to be replaced by MySQL at a later time
-var storeData = {};
-var adjectives = ["Spicy", "Rowdy", "Glorious", "Humble", "Gentle", "Ridiculous"];
-var nouns = ["Moonshine", "Citrus", "Mocha", "Celebration", "Watermelon", "Bourbon", "Classic", "California-Style"];
-var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale"];
-var availabilities = ["Year-round", "Seasonal"];
-var products = [];
-var numProducts = 20;
-for(var i = 0; i < numProducts; i++){
-    var type = types[Math.floor(Math.random() * types.length)];
-    var noun = nouns[Math.floor(Math.random() * nouns.length)];
-    var adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-    var newProduct = {}
-    newProduct.name = adjective + ' ' + noun + ' ' + type;
-    newProduct.type = type;
-    newProduct.description = "This is product " + i + "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima tempora asperiores, ipsum quae ipsam blanditiis, at aliquam ex dolorum delectus dolore ut quo fugit explicabo ipsa tenetur, cumque ducimus?";
-    newProduct.id = i + 1;
-    newProduct.availability = availabilities[Math.floor(Math.random() * availabilities.length)];
-    newProduct.alc = (Math.random() * (12 - 4 + 1) + 4).toFixed(1);
-    newProduct.ibu = Math.floor(Math.random() * (100 - 45 + 1) + 45);
-    products.push(newProduct);
+function regenBeers(){
+    var adjectives = ["Spicy", "Rowdy", "Glorious", "Humble", "Saucy", "Unnecessary", "Cantankerous", "Bodacious", "Yellow-bellied", "Blue-footed", "Poorly-made", "Ill-conceived"];
+    var nouns = ["Moonshine", "Citrus", "Nasty", "Boffish", "Stank", "Mocha", "Celebration", "Watermelon", "Bourbon", "Classic", "California-Style"];
+    var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale", "Sour"];
+    var availabilities = ["Year-round", "Seasonal", "Limited"];
+    var products = [];
+    var numProducts = types.length;
+    for(var i = 0; i < numProducts; i++){
+        var type = types[i];
+        // Get random word for noun and remove
+        var nounIndex = Math.floor(Math.random() * nouns.length);
+        var noun = nouns[nounIndex];
+        nouns.splice(nounIndex, 1);
+        // Get random word for adjective and remove
+        var adjIndex = Math.floor(Math.random() * adjectives.length);
+        var adjective = adjectives[adjIndex];
+        adjectives.splice(adjIndex, 1);
+        var newProduct = {}
+        newProduct.name = adjective + ' ' + noun + ' ' + type;
+        newProduct.type = type;
+        newProduct.description = "Everything you need to know about our amazing " + newProduct.name + ":\nLorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima tempora asperiores, ipsum quae ipsam blanditiis, at aliquam ex dolorum delectus dolore ut quo fugit explicabo ipsa tenetur, cumque ducimus?";
+        newProduct.id = i + 1;
+        newProduct.availability = availabilities[Math.floor(Math.random() * availabilities.length)];
+        newProduct.alc = (Math.random() * (12 - 4 + 1) + 4).toFixed(1);
+        newProduct.ibu = Math.floor(Math.random() * (100 - 45 + 1) + 45);
+        products.push(newProduct);
+    }
+    return products;    
 }
-storeData.productList = products;
-
+var storeData = {};
 
 var express = require('express');
 var app = express();
@@ -47,6 +54,7 @@ app.get('/guestbook', function(req,res){
 });
 
 app.get('/products', function(req,res){
+    storeData.productList = regenBeers();    
     res.render('products', storeData);
 });
 
