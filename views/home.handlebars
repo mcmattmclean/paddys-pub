@@ -1,78 +1,77 @@
 <h1 class="text-center">Welcome to Paddy's Pub and Brewery!</h1>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="row">
-          <div class="col-md-4">
-            <p>Here you'll find the hoppiest IPAs, the maltiest stouts, and the tastiest lagers in all the land.</p>
+      <div class="row text-center">
+          <div>
+            <p>Here you'll find the hoppiest IPAs, the maltiest stouts, and the tastiest lagers in all the land. We also make food.</p>
           </div>
-          <div class="col-md-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quos similique rem vitae tempora animi deleniti distinctio obcaecati earum voluptatibus possimus corporis aliquam nesciunt, fuga nam, sed ea culpa dolore?</div>
+          {{!-- <div class="col-md-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quos similique rem vitae tempora animi deleniti distinctio obcaecati earum voluptatibus possimus corporis aliquam nesciunt, fuga nam, sed ea culpa dolore?</div> --}}
       </div>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-        <div id="home-carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#home-carousel" data-slide-to="1"></li>
-            <li data-target="#home-carousel" data-slide-to="2"></li>
-          </ol>
+      <div class="row carousel-row">
+        <div class="col-md-10">
+          <div id="home-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#home-carousel" data-slide-to="1"></li>
+              <li data-target="#home-carousel" data-slide-to="2"></li>
+            </ol>
 
-          <div class="carousel-inner">
-            <div class="item active">
-              <img class="caro-img" src="/static/images/taps.jpeg" alt="Wall of beers">
-              <div class="carousel-caption">
-                <h3>Over 20 beers on tap</h3>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="caro-img" src="/static/images/taps.jpeg" alt="Wall of beers">
+                <div class="carousel-caption">
+                  <h3>Over 6 beers on tap</h3>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <img class="caro-img" src="/static/images/food.jpg" alt="Plate of spaghetti in foreground with caprese salad and beers in background.">
-              <div class="carousel-caption">
-                <h3>Delicious hearty meals</h3>
-              </div>
-            </div>
               <div class="item">
-              <img class="caro-img" src="static/images/dining.jpg" alt="The barrel room">
-              <div class="carousel-caption">
-                <h3>Indoor and outdoor seating options</h3>
+                <img class="caro-img" src="/static/images/food.jpg" alt="Plate of spaghetti in foreground with caprese salad and beers in background.">
+                <div class="carousel-caption">
+                  <h3>Delicious hearty meals</h3>
+                </div>
+              </div>
+                <div class="item">
+                <img class="caro-img" src="static/images/dining.jpg" alt="The barrel room">
+                <div class="carousel-caption">
+                  <h3>Indoor and outdoor seating</h3>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Controls -->
-          <a class="left carousel-control" href="#home-carousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#home-carousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#home-carousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#home-carousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
         </div>
+        <div class="col-md-2 list well">
+          <h2>Reasons to come to Paddy's:</h2>
+          <ul>
+            <li>The beer is generally above average.</li>
+            <li>The food is acceptably tasty after about 3 beers.</li>
+            <li>No one has died on the property (as of Oct. 2017).</li>
+            <li>We make unnecessary lists.</li>
+            <li>This list needs more items for aesthetic purposes.</li>
+            <li>I think one more should do it here.</li>
+          </ul>
         </div>
-        <div class="col-md-2"></div>
+      </div>
+      <div class="news">
+      <div class="row text-center">
+        <h2>News</h2>
       </div>
       <div class="row">
-        <div class="col-md-4">
-        <p>Test 1/3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae quia ad aspernatur in, blanditiis iusto nam recusandae, dolore dignissimos excepturi cumque nisi iste suscipit! A, explicabo. Quas, ratione accusantium.</p>
+        <div class="col-md-4 well">
+          <p>Thursday night is karaoke night! Bring your friends, family, and your pipes for a night of fun!</p>
         </div>
-        <div class="col-md-4">
-          <p>Test 2/3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio deleniti dignissimos velit nam et, fuga at culpa? Non labore vel voluptatibus accusantium debitis quidem excepturi suscipit, nisi delectus, optio iusto.</p>
+        <div class="col-md-4 well">
+          <p>Friday night is BYOF night! (Bring your own food, because ours isn't very good.)</p>
         </div>
-        <div class="col-md-4">
-          <p>Test 3/3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, amet sed rerum sapiente sequi esse nemo, corporis reprehenderit culpa debitis cum? Dolore nesciunt consequatur culpa distinctio dolores dolor error corrupti.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <h2>Join our rewards club here!</h2>
-    </div>
-    <div class="col-md-2">
-        <div class="scroll-box">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos repellendus vel aliquid a? Earum, sunt veniam commodi quam facere cum eum, nulla voluptate ab voluptatem itaque minus, impedit consequatur!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos repellendus vel aliquid a? Earum, sunt veniam commodi quam facere cum eum, nulla voluptate ab voluptatem itaque minus, impedit consequatur!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos repellendus vel aliquid a? Earum, sunt veniam commodi quam facere cum eum, nulla voluptate ab voluptatem itaque minus, impedit consequatur!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos repellendus vel aliquid a? Earum, sunt veniam commodi quam facere cum eum, nulla voluptate ab voluptatem itaque minus, impedit consequatur!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos repellendus vel aliquid a? Earum, sunt veniam commodi quam facere cum eum, nulla voluptate ab voluptatem itaque minus, impedit consequatur!
+        <div class="col-md-4 well">
+          <p>Kids eat at double price on weekends! Please stop bringing them!</p>
         </div>
       </div>
-  </div>
+      </div>
+    </div>
 </div>
