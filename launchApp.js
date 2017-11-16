@@ -1,4 +1,3 @@
-var storeData = {};
 var express = require('express');
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
@@ -9,6 +8,13 @@ app.set('port', 7728);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use('/static', express.static('public'));
+var storeData = {};
+storeData.feedback = [];
+var testFeedback = {};
+testFeedback.name = "Bob";
+testFeedback.rating = 5;
+testFeedback.comment = "Food was terrible, beer okay.";
+storeData.feedback.push(testFeedback);
 
 app.get('/', function(req,res){
     res.render('home');
@@ -19,7 +25,17 @@ app.get('/restaurant', function(req,res){
 });
 
 app.get('/guestbook', function(req,res){
-    res.render('guestbook');
+    console.log(req.query);
+    res.render('guestbook', storeData);
+});
+
+app.post('/guestbook', function(req,res){
+    var newFeedback = {};
+    newFeedback.name = req.body.name;
+    newFeedback.rating = req.body.rating;
+    newFeedback.comment = req.body.comment;
+    storeData.feedback.push(newFeedback);
+    res.render('guestbook', storeData);
 });
 
 app.get('/products', function(req,res){
