@@ -25,7 +25,6 @@ app.get('/restaurant', function(req,res){
 });
 
 app.get('/guestbook', function(req,res){
-    console.log(req.query);
     res.render('guestbook', storeData);
 });
 
