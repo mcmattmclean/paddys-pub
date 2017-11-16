@@ -74,3 +74,21 @@ div > h1 {
     border-bottom: 2px solid black;
     margin: 10px;
 }
+
+.scroll-box {
+    overflow: auto; 
+    max-width:200px; 
+    max-height:600px;
+    /* padding-right: 20px; */
+}
+
+/* *{
+    border: 1px solid red;
+} */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .scroll-box {display: none;}
+}
