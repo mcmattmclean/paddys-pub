@@ -22,10 +22,6 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-body .container * {
-    margin-top: 10px;
-}
-
 div > h1 {
     /* border: solid red 1px; */
     font-family: 'Raleway', sans-serif;
@@ -61,6 +57,10 @@ div > h1 {
 
 .navbar-default {
     border-width: 0;
+}
+
+div>.carousel {
+    margin-bottom: 20px;
 }
 
 .carousel-caption {
