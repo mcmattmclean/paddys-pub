@@ -71,11 +71,11 @@ app.listen(app.get('port'), function(){
 function regenBeers(){
     var adjectives = ["Spicy", "Rowdy", "Saucy", "Unnecessary", "Cantankerous", "Bodacious", "Yellow-bellied", "Blue-footed", "Poorly-made", "Ill-conceived"];
     var nouns = ["Moonshine", "Citrus", "Nasty", "Boffish", "Stank", "Mocha", "Watermelon", "Bourbon", "California-Style"];
-    var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale", "Sour"];
+    var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale", "Sour", "Saison"];
     var availabilities = ["Year-round", "Seasonal", "Limited"];
-    var userReviews =["It was okay I guess.", "I'm not sure who asked for this, but there you have it.", "I'm not really a beer fan but I guess it was nice?", "Terrible smell, strange aftertaste, and the lacing was beyond subpar. 0/10", "Please stop making me drink this.", "Surprisingly not awful.", "..."];
-    var userFirstName = ["Cindy", "Bruce", "Balthazar", "Joe", "Jessica", "Melissa", "Jeb"];
-    var userLastName = ["Bush", "Wayne", "Simpson", "Smith", "of the Dark Forest, the Unseen Horror", "MacDonald", "Douglas"];
+    var userReviews =["It was okay I guess.", "I'm not sure who asked for this, but there you have it.", "I'm not really a beer fan but I guess it was nice?", "Terrible smell, strange aftertaste, and the lacing was beyond subpar. 0/10", "Please stop making me drink this.", "Surprisingly not awful.", "...", "Their only good beer."];
+    var userFirstName = ["Cindy", "Bruce", "Balthazar", "Joe", "Jessica", "Melissa", "Jeb", "Frederick"];
+    var userLastName = ["Bush", "Wayne", "Smith", "of the Dark Forest, the Unseen Horror", "MacDonald", "Douglas", "(no last name)"];
     var products = [];
     var numProducts = types.length;
     function getRandomAndRemove(list){
@@ -98,7 +98,6 @@ function regenBeers(){
         newProduct.review.content = review;
         newProduct.name = adjective + ' ' + noun + ' ' + type;
         newProduct.type = type;
-        newProduct.description = "Everything you need to know about our amazing " + newProduct.name + ":\nLorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima tempora asperiores, ipsum quae ipsam blanditiis, at aliquam ex dolorum delectus dolore ut quo fugit explicabo ipsa tenetur, cumque ducimus?";
         newProduct.id = i + 1;
         newProduct.availability = availabilities[Math.floor(Math.random() * availabilities.length)];
         newProduct.alc = (Math.random() * (12 - 4 + 1) + 4).toFixed(1);
