@@ -45,6 +45,10 @@ app.get('/products', function(req,res){
     res.render('products', storeData);
 });
 
+app.get('/outside-links', function(req,res){
+    res.render('outside-links');
+})
+
 // Error handling
 app.use(function(req,res){
     res.type('text/plain');
