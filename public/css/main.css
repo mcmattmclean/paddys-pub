@@ -119,8 +119,8 @@ div > h1 {
 } */
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
+/* @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
     .scroll-box {display: none;}
-}
+} */

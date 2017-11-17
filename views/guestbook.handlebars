@@ -12,12 +12,12 @@
 <form role="form" action="/guestbook" method="POST">
     <div class="row well comments">
         <div class="col-md-3 form-group">
-            <label for="name">Name:</label> 
-            <input type="text" id="name" name="name" class="form-control" required>
+            <label for="name">Name (Optional):</label> 
+            <input type="text" id="name" name="name" class="form-control">
         </div>
         <div class="col-md-3 form-group">
             <label for="rating">Rating:</label>
-            <input type="number" id="rating" name="rating" class="form-control" required>
+            <input type="number" min="1" max="10" id="rating" name="rating" class="form-control" required>
         </div>
         <div class="col-md-6 form-group">
             <label for="comment">Comment:</label>

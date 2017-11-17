@@ -31,6 +31,9 @@ app.get('/guestbook', function(req,res){
 app.post('/guestbook', function(req,res){
     var newFeedback = {};
     newFeedback.name = req.body.name;
+    if(newFeedback.name == ""){
+        newFeedback.name = "Anonymous";
+    }
     newFeedback.rating = req.body.rating;
     newFeedback.comment = req.body.comment;
     storeData.feedback.push(newFeedback);
