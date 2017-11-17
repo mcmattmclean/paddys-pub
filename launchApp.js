@@ -74,8 +74,8 @@ function regenBeers(){
     var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale", "Sour", "Saison"];
     var availabilities = ["Year-round", "Seasonal", "Limited"];
     var userReviews =["It was okay I guess.", "I'm not sure who asked for this, but there you have it.", "I'm not really a beer fan but I guess it was nice?", "Terrible smell, strange aftertaste, and the lacing was beyond subpar. 0/10", "Please stop making me drink this.", "Surprisingly not awful.", "...", "Their only good beer."];
-    var userFirstName = ["Cindy", "Bruce", "Balthazar", "Joe", "Jessica", "Melissa", "Jeb", "Frederick"];
-    var userLastName = ["Bush", "Wayne", "Smith", "of the Dark Forest, the Unseen Horror", "MacDonald", "Douglas", "(no last name)"];
+    var userFirstName = ["Cindy", "Bruce", "Balthazar", "David", "Jessica", "Melissa", "Jeb", "Frederick"];
+    var userLastName = ["Bush", "Wayne", "S. Pumpkins", "of the Dark Forest, the Unseen Horror", "MacDonald", "Douglas", "(no last name)"];
     var products = [];
     var numProducts = types.length;
     function getRandomAndRemove(list){
