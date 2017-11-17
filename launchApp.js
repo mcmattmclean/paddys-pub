@@ -69,23 +69,33 @@ app.listen(app.get('port'), function(){
 
 // Generate product list, to be replaced by MySQL at a later time
 function regenBeers(){
-    var adjectives = ["Spicy", "Rowdy", "Glorious", "Humble", "Saucy", "Unnecessary", "Cantankerous", "Bodacious", "Yellow-bellied", "Blue-footed", "Poorly-made", "Ill-conceived"];
+    var adjectives = ["Spicy", "Rowdy", "Saucy", "Unnecessary", "Cantankerous", "Bodacious", "Yellow-bellied", "Blue-footed", "Poorly-made", "Ill-conceived"];
     var nouns = ["Moonshine", "Citrus", "Nasty", "Boffish", "Stank", "Mocha", "Celebration", "Watermelon", "Bourbon", "Classic", "California-Style"];
     var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale", "Sour"];
     var availabilities = ["Year-round", "Seasonal", "Limited"];
+    var userReviews =["It was okay I guess.", "I'm not sure who asked for this, but there you have it.", "I'm not really a beer fan but I guess it was nice?", "Terrible smell, strange aftertaste, and the lacing was beyond subpar. 0/10", "Please stop making me drink this.", "Surprisingly not awful.", "..."];
+    var userFirstName = ["Cindy", "Bruce", "Balthazar", "Joe", "Jessica", "Melissa", "Jeb"];
+    var userLastName = ["Bush", "Wayne", "Simpson", "Smith", "of the Dark Forest, the Unseen Horror", "MacDonald", "Douglas"];
     var products = [];
     var numProducts = types.length;
+    function getRandomAndRemove(list){
+        var index = Math.floor(Math.random() * list.length);
+        random = list[index];
+        list.splice(index, 1);
+        return random;
+    }
     for(var i = 0; i < numProducts; i++){
         var type = types[i];
-        // Get random word for noun and remove
-        var nounIndex = Math.floor(Math.random() * nouns.length);
-        var noun = nouns[nounIndex];
-        nouns.splice(nounIndex, 1);
-        // Get random word for adjective and remove
-        var adjIndex = Math.floor(Math.random() * adjectives.length);
-        var adjective = adjectives[adjIndex];
-        adjectives.splice(adjIndex, 1);
+        var noun = getRandomAndRemove(nouns);
+        var adjective = getRandomAndRemove(adjectives);
+        var firstN = getRandomAndRemove(userFirstName);
+        var lastN = getRandomAndRemove(userLastName);
+        var review = getRandomAndRemove(userReviews);
         var newProduct = {}
+        newProduct.review = {};
+        newProduct.review.firstN = firstN;
+        newProduct.review.lastN = lastN;
+        newProduct.review.content = review;
         newProduct.name = adjective + ' ' + noun + ' ' + type;
         newProduct.type = type;
         newProduct.description = "Everything you need to know about our amazing " + newProduct.name + ":\nLorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima tempora asperiores, ipsum quae ipsam blanditiis, at aliquam ex dolorum delectus dolore ut quo fugit explicabo ipsa tenetur, cumque ducimus?";
