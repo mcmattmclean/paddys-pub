@@ -70,7 +70,7 @@ app.listen(app.get('port'), function(){
 // Generate product list, to be replaced by MySQL at a later time
 function regenBeers(){
     var adjectives = ["Spicy", "Rowdy", "Saucy", "Unnecessary", "Cantankerous", "Bodacious", "Yellow-bellied", "Blue-footed", "Poorly-made", "Ill-conceived"];
-    var nouns = ["Moonshine", "Citrus", "Nasty", "Boffish", "Stank", "Mocha", "Celebration", "Watermelon", "Bourbon", "Classic", "California-Style"];
+    var nouns = ["Moonshine", "Citrus", "Nasty", "Boffish", "Stank", "Mocha", "Watermelon", "Bourbon", "California-Style"];
     var types = ["IPA", "Imperial IPA", "Lager", "Stout", "Porter", "Pale Ale", "Sour"];
     var availabilities = ["Year-round", "Seasonal", "Limited"];
     var userReviews =["It was okay I guess.", "I'm not sure who asked for this, but there you have it.", "I'm not really a beer fan but I guess it was nice?", "Terrible smell, strange aftertaste, and the lacing was beyond subpar. 0/10", "Please stop making me drink this.", "Surprisingly not awful.", "..."];
