@@ -1,3 +1,9 @@
+// File: launchApp.js
+// Course: CS290-400 (F2017)
+// Assignment: Project
+// Name: Matthew McLean
+// Due Date: November 19, 2017
+
 var express = require('express');
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
