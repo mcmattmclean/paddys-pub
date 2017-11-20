@@ -132,15 +132,3 @@ div>.carousel {
 .container {
     min-height: 100%;
 }
-
-/* *{
-    border: 1px solid red;
-} */
-
-/* Smartphones (portrait and landscape) ----------- */
-/* @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-    .scroll-box {display: none;}
-} */
-
