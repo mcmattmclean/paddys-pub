@@ -1,9 +1,3 @@
-// File: launchApp.js
-// Course: CS290-400 (F2017)
-// Assignment: Project
-// Name: Matthew McLean
-// Due Date: November 19, 2017
-
 const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
