@@ -4,6 +4,7 @@
   "description": "Project: Brewery/Restaurant website",
   "main": "launchApp.js",
   "scripts": {
+    "start": "node launchApp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matthew McLean",

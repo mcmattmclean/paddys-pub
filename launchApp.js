@@ -4,13 +4,15 @@
 // Name: Matthew McLean
 // Due Date: November 19, 2017
 
-var express = require('express');
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
+
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
 var bodyParser = require('body-parser');
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 7728);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use('/static', express.static('public'));
@@ -69,8 +71,8 @@ app.use(function(err, req, res, next){
 });
 
 // Start app on assigned port
-app.listen(app.get('port'), function(){
-    console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
+app.listen(PORT, function(){
+    console.log('Listening on ' + PORT);
 });
 
 // Generate product list, to be replaced by MySQL at a later time
